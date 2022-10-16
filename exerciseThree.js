@@ -39,6 +39,11 @@ const user = {
 function weightedArithmeticMeanVerTwo(obj){ 
     let weightedMean = 0;
     let sumOfWeight = 0;
+    // exercise four
+    if(_.find(obj.allGrades, {'weight': 1})){
+        console.log(_.find(obj.allGrades, {'weight': 1}))
+    }
+    // end of exercise four
     obj.allGrades.map(
         (grade) => {
             weightedMean += _.sum(grade.grades) * grade.weight
@@ -49,3 +54,4 @@ function weightedArithmeticMeanVerTwo(obj){
 }
 
 console.log(weightedArithmeticMeanVerTwo(user));
+
